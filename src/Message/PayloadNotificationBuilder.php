@@ -385,6 +385,25 @@ class PayloadNotificationBuilder
     {
         return $this->icon;
     }
+     /**
+     * Get Icon.
+     *
+     * @return null|string
+     */
+    public function getSmallIcon()
+    {
+        return $this->smallIcon;
+    }
+    
+     /**
+     * Get Icon.
+     *
+     * @return null|string
+     */
+    public function getLargeIcon()
+    {
+        return $this->largeIcon;
+    }
 
     /**
      * Get Sound.
