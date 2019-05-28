@@ -42,6 +42,20 @@ class PayloadNotification implements Arrayable
      *
      * @var null|string
      */
+    protected $smallIcon;
+
+    /**
+     * @internal
+     *
+     * @var null|string
+     */
+    protected $largeIcon;
+
+    /**
+     * @internal
+     *
+     * @var null|string
+     */
     protected $sound;
 
     /**
@@ -111,6 +125,8 @@ class PayloadNotification implements Arrayable
         $this->body = $builder->getBody();
         $this->channelId = $builder->getChannelId();
         $this->icon = $builder->getIcon();
+        $this->smallIcon = $builder->getSmallIcon();
+        $this->largeIcon = $builder->getLargeIcon();
         $this->sound = $builder->getSound();
         $this->badge = $builder->getBadge();
         $this->tag = $builder->getTag();
@@ -134,6 +150,8 @@ class PayloadNotification implements Arrayable
             'body' => $this->body,
             'android_channel_id' => $this->channelId,
             'icon' => $this->icon,
+            'small_icon' => $this->smallIcon,
+            'large_icon' => $this->largeIcon,
             'sound' => $this->sound,
             'badge' => $this->badge,
             'tag' => $this->tag,
