@@ -31,6 +31,19 @@ class PayloadNotificationBuilder
      * @var null|string
      */
     protected $icon;
+    
+    /**
+     * @internal
+     *
+     * @var null|string
+     */
+    protected $smallIcon;
+    /**
+     * @internal
+     *
+     * @var null|string
+     */
+    protected $largeIcon;
 
     /**
      * @internal
@@ -166,6 +179,34 @@ class PayloadNotificationBuilder
     public function setIcon($icon)
     {
         $this->icon = $icon;
+
+        return $this;
+    }
+     /**
+     * Supported Android
+     * Indicates notification icon. example : Sets value to myicon for drawable resource myicon.
+     *
+     * @param string $icon
+     *
+     * @return PayloadNotificationBuilder current instance of the builder
+     */
+    public function setSmallIcon($icon)
+    {
+        $this->smallIcon = $icon;
+
+        return $this;
+    }
+     /**
+     * Supported Android
+     * Indicates notification icon. example : Sets value to myicon for drawable resource myicon.
+     *
+     * @param string $icon
+     *
+     * @return PayloadNotificationBuilder current instance of the builder
+     */
+    public function setLargeIcon($icon)
+    {
+        $this->largeIcon = $icon;
 
         return $this;
     }
